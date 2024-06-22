@@ -86,7 +86,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 				console.error("Error:", error);
 			}
 
-			await new Promise((resolve) => setTimeout(resolve, 800));
+			await new Promise((resolve) => setTimeout(resolve, 2000));
 		}
 
 		return results;
@@ -98,6 +98,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 	console.log(withData);
 
-	res.setHeader("Cache-Control", withData ? "s-maxage=1000" : "s-maxage=30");
+	res.setHeader("Cache-Control", withData ? "s-maxage=3600" : "s-maxage=30");
 	res.status(200).json({ processingActivities, time: new Date().toISOString() });
 }
