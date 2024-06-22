@@ -68,7 +68,7 @@ export const getServerSideProps = async () => {
 					rewData = undefined
 				}
 
-				results.push({ ...item, reward: rewData || rewData?.data });
+				results.push({ ...item, reward: rewData && rewData?.data });
 			} catch (error) {
 				console.error("Error:", error);
 			}
