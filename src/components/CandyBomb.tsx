@@ -104,8 +104,8 @@ const RenderInfoColumns = ({
 
 const BombTableRow = ({ activity, predictUsers }: { activity: ProcessingActivities; predictUsers?: boolean }) => {
 	const tokenPrice = activity.ieoTotalUsdt / activity.ieoTotal;
-	const spotReward = activity.reward.find(({ targetType }) => targetType === 4);
-	const futuresReward = activity.reward.find(({ targetType }) => targetType === 39);
+	const spotReward = activity.reward?.find(({ targetType }) => targetType === 4);
+	const futuresReward = activity.reward?.find(({ targetType }) => targetType === 39);
 
 	const volumeOndTime = dayjs(Number(activity.endTime));
 
