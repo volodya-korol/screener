@@ -27,10 +27,38 @@ export const getServerSideProps = async () => {
 			"sec-ch-ua-platform": '"Windows"',
 			"sec-fetch-dest": "empty",
 			"sec-fetch-mode": "no-cors",
-			"sec-fetch-site": "same-origin",
+			"sec-fetch-site": "unsafe-none",
 			"sentry-trace": "a368c02f39634debb2a1375d22a91a5d-92fbae13798cfdf2-0",
 			terminalcode: "312fb273ec84c49976a35981fc49d029",
 			terminaltype: "1",
+
+
+			connection: "close",
+			"accept-ch":
+				"Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+			"critical-ch":
+				"Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+			"cross-origin-embedder-policy": "require-corp",
+			"cross-origin-opener-policy": "unsafe-none",
+			"cross-origin-resource-policy": "unsafe-none",
+			"origin-agent-cluster": "?1",
+			"permissions-policy":
+				"accelerometer=(),autoplay=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()",
+			"referrer-policy": "unsafe-none",
+			"x-content-options": "nosniff",
+			"cf-mitigated": "challenge",
+			"cf-chl-out":
+				"0PFxk9SH/CAryS3SaMqDPqAuYOCxwPcT2GntSlhWecj6zUgbW2NfiwhY4W9khN3MlMVZPZxLdexmPwDWPDbY8727li3zis5rZX3w9M0f/CQSR8a6Sh+Q16B9zJzjaRn6eT3YrGVyqvEo4pCRNKtAbA==$w2GCE6BS9DiTBFqYy8HivQ==",
+			"cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+			expires: "Thu, 01 Jan 1970 00:00:01 GMT",
+			"set-cookie":
+				"__cf_bm=HWPOc54Ll78tmg3rtaaOZcjuBqIUU7IJ1LvC1fNK7Qs-1719069814-1.0.1.1-h9YguP7szmZp0efNNxujXrkXInh9Hb.MKsGlhsQd_z5mLGEk8asP_RW3LWfGkDhUgulZ4vP8HX.GGKlyXqJ9HQ; path=/; expires=Sat, 22-Jun-24 15:53:34 GMT; domain=.bitget.com; HttpOnly; Secure; SameSite=None",
+			vary: "Accept-Encoding",
+			"x-frame-options": "SAMEORIGIN",
+			server: "cloudflare",
+			"cf-ray": "897d3d822f1a3818-IAD",
+			"content-encoding": "br",
+			"alt-svc": 'h3=":443"; ma=86400',
 		},
 		referrer: "https://www.bitget.com/uk/events/candy-bomb",
 		referrerPolicy: "unsafe-url",
