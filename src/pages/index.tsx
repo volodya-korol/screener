@@ -36,6 +36,8 @@ export const getServerSideProps = async () => {
 		referrerPolicy: "unsafe-url",
 		body: '{"airDropType":0}',
 		method: "POST",
+		mode: "no-cors", // додаєте цей параметр
+		credentials: "omit", // додаєте цей параметр
 	});
 	console.log(await resRes.text());
 	console.log(resRes.headers);
