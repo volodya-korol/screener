@@ -42,44 +42,48 @@ export const getServerSideProps = async () => {
 		body: '{"airDropType":0}',
 		method: "POST",
 	});
-	const res = await resRes.json();
+	console.log(resRes.text());
+	console.error(resRes.text());
 
-	async function processArrayAsync() {
-		const results = [];
 
-		for (const item of res.data.processingActivities) {
-			try {
-				const reward = await fetch("https://www.bitget.com/v1/act/candyBombNew/myReward", {
-					headers: {
-						accept: "application/json, text/plain, */*",
-						"content-type": "application/json;charset=UTF-8",
-					},
-					body: `{"activityId":${item.id}}`,
-					method: "POST",
-				}).then((res) => res?.text());
+	// const res = await resRes.json();
 
-				console.log(reward);
+	// async function processArrayAsync() {
+	// 	const results = [];
 
-				let rewData = undefined
+	// 	for (const item of res.data.processingActivities) {
+	// 		try {
+	// 			const reward = await fetch("https://www.bitget.com/v1/act/candyBombNew/myReward", {
+	// 				headers: {
+	// 					accept: "application/json, text/plain, */*",
+	// 					"content-type": "application/json;charset=UTF-8",
+	// 				},
+	// 				body: `{"activityId":${item.id}}`,
+	// 				method: "POST",
+	// 			}).then((res) => res?.text());
 
-				try {
-					rewData = JSON.parse(reward)
-				} catch (error) {
-					rewData = undefined
-				}
+	// 			console.log(reward);
 
-				results.push({ ...item, reward: rewData && rewData?.data });
-			} catch (error) {
-				console.error("Error:", error);
-			}
+	// 			let rewData = undefined
 
-			await new Promise((resolve) => setTimeout(resolve, 800));
-		}
+	// 			try {
+	// 				rewData = JSON.parse(reward)
+	// 			} catch (error) {
+	// 				rewData = undefined
+	// 			}
 
-		return results;
-	}
+	// 			results.push({ ...item, reward: rewData && rewData?.data });
+	// 		} catch (error) {
+	// 			console.error("Error:", error);
+	// 		}
 
-	const processingActivities = await processArrayAsync();
+	// 		await new Promise((resolve) => setTimeout(resolve, 800));
+	// 	}
 
-	return { props: { processingActivities } };
+	// 	return results;
+	// }
+
+	// const processingActivities = await processArrayAsync();
+
+	return { props: { processingActivities: [] } };
 };
