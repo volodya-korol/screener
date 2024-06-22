@@ -59,8 +59,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 					return res?.text();
 				});
 
-				console.log(reward);
-
 				let rewData = undefined;
 
 				try {
