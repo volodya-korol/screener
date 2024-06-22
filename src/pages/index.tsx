@@ -11,7 +11,7 @@ export default function Home(props: HomeProps) {
 }
 
 export const getServerSideProps = async () => {
-	const resRes = await fetch("https://www.bitget.com/v1/act/candyBombNew/current/list", {
+	const resRes = await fetch("https://www.bitget.com/v1/act/candyBombNew/current/list/", {
 		headers: {
 			accept: "application/json, text/plain, */*",
 			"accept-language": "uk,en;q=0.9,en-US;q=0.8,uk-UA;q=0.7,pl;q=0.6",
