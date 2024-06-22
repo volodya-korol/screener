@@ -38,7 +38,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 		}
 	});
 
-	await new Promise((resolve) => setTimeout(resolve, 5000));
 
 	async function processArrayAsync() {
 		const results: any[] = [];
@@ -46,6 +45,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 		if (data?.nodata) return results;
 
 		for (const item of data?.data?.processingActivities) {
+			await new Promise((resolve) => setTimeout(resolve, 2000));
+
 			try {
 				const reward = await fetch("https://www.bitget.com/v1/act/candyBombNew/myReward", {
 					headers: {
@@ -88,7 +89,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 				console.error("Error:", error);
 			}
 
-			await new Promise((resolve) => setTimeout(resolve, 2000));
+
 		}
 
 		return results;
