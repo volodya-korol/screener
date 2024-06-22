@@ -82,6 +82,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 	const processingActivities = await processArrayAsync();
 
-	res.setHeader('Cache-Control', 's-maxage=86400');
+	res.setHeader('Cache-Control', 's-maxage=1000');
 	res.status(200).json({ processingActivities, time: new Date().toISOString() });
 }
