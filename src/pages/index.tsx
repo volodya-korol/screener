@@ -56,9 +56,19 @@ export const getServerSideProps = async () => {
 					},
 					body: `{"activityId":${item.id}}`,
 					method: "POST",
-				}).then((res) => res.json());
+				}).then((res) => res?.text());
 
-				results.push({ ...item, reward: reward?.data });
+				console.log(reward);
+
+				let rewData = {}
+
+				try {
+					rewData = JSON.parse(reward)
+				} catch (error) {
+					rewData = {}
+				}
+
+				results.push({ ...item, reward: rewData?.data });
 			} catch (error) {
 				console.error("Error:", error);
 			}
