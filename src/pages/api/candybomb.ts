@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 	console.log("rest");
+
 	const data = await fetch("https://www.bitget.com/v1/act/candyBombNew/current/list", {
 		headers: {
 			accept: "application/json, text/plain, */*",
@@ -42,7 +43,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 		if (data?.nodata) return results;
 
-		for (const item of data.processingActivities) {
+		for (const item of data?.data?.processingActivities) {
 			try {
 				const reward = await fetch("https://www.bitget.com/v1/act/candyBombNew/myReward", {
 					headers: {
@@ -51,7 +52,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 					},
 					body: `{"activityId":${item.id}}`,
 					method: "POST",
-				}).then((res) => res?.text());
+				}).then((res) => {
+					console.log(res.status);
+					console.log(res.statusText);
+
+					return res?.text();
+				});
 
 				console.log(reward);
 
@@ -76,5 +82,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 	const processingActivities = await processArrayAsync();
 
-	res.status(200).json({ processingActivities });
+	res.setHeader('Cache-Control', 's-maxage=86400');
+	res.status(200).json({ processingActivities, time: new Date().toISOString() });
 }

@@ -8,7 +8,7 @@ export default function Home(props: HomeProps) {
 	console.log(props);
 
 	return (
-		<div className="p-4 bg-cyan-500" onClick={() => fetch("https://screener-lhlo.vercel.app/api/candybomb")}>
+		<div className="p-4 bg-cyan-500" onClick={() => fetch("/api/candybomb")}>
 			{/* <CandyBomb {...props} /> */}
 		</div>
 	);
