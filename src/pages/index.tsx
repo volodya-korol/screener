@@ -11,7 +11,7 @@ export default function Home(props: HomeProps) {
 		<div
 			className="p-4 bg-cyan-500"
 			onClick={() =>
-				fetch('http://localhost:3000/api/test')
+				fetch('https://screener-lhlo.vercel.app/api/test')
 			}>
 			{/* <CandyBomb {...props} /> */}
 		</div>
