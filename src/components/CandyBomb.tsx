@@ -14,7 +14,7 @@ import {
 import dayjs from "dayjs";
 import { useState } from "react";
 import { FaCircleExclamation, FaCircleInfo } from "react-icons/fa6";
-import { ProcessingActivities, Reward } from "./types";
+import { ProcessingActivities, Reward } from "../types";
 
 const volumeCloseOffset = 2;
 

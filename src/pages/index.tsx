@@ -1,5 +1,5 @@
-import { CandyBomb } from "./CandyBomb";
-import { ProcessingActivities } from "./types";
+import { CandyBomb } from "../components/CandyBomb";
+import { ProcessingActivities } from "../types";
 
 type HomeProps = {
 	processingActivities: ProcessingActivities[];
@@ -7,7 +7,6 @@ type HomeProps = {
 
 export default function Home(props: HomeProps) {
 	console.log(props);
-
 
 	return (
 		<div className="p-4">
@@ -64,7 +63,7 @@ export const getServerSideProps = async () => {
 				console.error("Error:", error);
 			}
 
-			await new Promise((resolve) => setTimeout(resolve, 1000));
+			await new Promise((resolve) => setTimeout(resolve, 800));
 		}
 
 		return results;
