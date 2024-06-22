@@ -1,4 +1,3 @@
-import { CandyBomb } from "../components/CandyBomb";
 import { ProcessingActivities } from "../types";
 
 type HomeProps = {
@@ -10,7 +9,7 @@ export default function Home(props: HomeProps) {
 
 	return (
 		<div className="p-4">
-			<CandyBomb {...props} />
+			{/* <CandyBomb {...props} /> */}
 		</div>
 	);
 }
@@ -42,8 +41,7 @@ export const getServerSideProps = async () => {
 		body: '{"airDropType":0}',
 		method: "POST",
 	});
-	console.log(resRes.text());
-	console.error(resRes.text());
+	console.log(await resRes.text());
 
 
 	// const res = await resRes.json();
