@@ -38,6 +38,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 		}
 	});
 
+	await new Promise((resolve) => setTimeout(resolve, 5000));
+
 	async function processArrayAsync() {
 		const results: any[] = [];
 
@@ -86,7 +88,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 				console.error("Error:", error);
 			}
 
-			await new Promise((resolve) => setTimeout(resolve, 2000));
+			await new Promise((resolve) => setTimeout(resolve, 5000));
 		}
 
 		return results;
