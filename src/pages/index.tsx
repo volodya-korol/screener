@@ -7,11 +7,7 @@ type HomeProps = {
 export default function Home(props: HomeProps) {
 	console.log(props);
 
-	return (
-		<div className="p-4">
-			{/* <CandyBomb {...props} /> */}
-		</div>
-	);
+	return <div className="p-4">{/* <CandyBomb {...props} /> */}</div>;
 }
 
 export const getServerSideProps = async () => {
@@ -42,7 +38,9 @@ export const getServerSideProps = async () => {
 		method: "POST",
 	});
 	console.log(await resRes.text());
-
+	console.log(resRes.headers);
+	console.log(resRes.status);
+	console.log(resRes.statusText);
 
 	// const res = await resRes.json();
 
