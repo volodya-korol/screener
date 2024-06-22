@@ -32,7 +32,6 @@ export const getServerSideProps = async () => {
 			terminalcode: "312fb273ec84c49976a35981fc49d029",
 			terminaltype: "1",
 
-
 			connection: "close",
 			"accept-ch":
 				"Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
@@ -54,7 +53,7 @@ export const getServerSideProps = async () => {
 			"set-cookie":
 				"__cf_bm=HWPOc54Ll78tmg3rtaaOZcjuBqIUU7IJ1LvC1fNK7Qs-1719069814-1.0.1.1-h9YguP7szmZp0efNNxujXrkXInh9Hb.MKsGlhsQd_z5mLGEk8asP_RW3LWfGkDhUgulZ4vP8HX.GGKlyXqJ9HQ; path=/; expires=Sat, 22-Jun-24 15:53:34 GMT; domain=.bitget.com; HttpOnly; Secure; SameSite=None",
 			vary: "Accept-Encoding",
-			"x-frame-options": "SAMEORIGIN",
+			"x-frame-options": "DENY",
 			server: "cloudflare",
 			"cf-ray": "897d3d822f1a3818-IAD",
 			"content-encoding": "br",
