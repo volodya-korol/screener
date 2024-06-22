@@ -82,6 +82,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 	const processingActivities = await processArrayAsync();
 
-	res.setHeader('Cache-Control', 's-maxage=1000');
+	const withData = processingActivities?.every((df) => !!df?.reward)
+
+	console.log(withData);
+
+
+	res.setHeader('Cache-Control', withData? 's-maxage=1000': 's-maxage=30');
 	res.status(200).json({ processingActivities, time: new Date().toISOString() });
 }
