@@ -37,7 +37,44 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 		}
 	});
 
-	console.log({ data });
+	async function processArrayAsync() {
+		const results: any[] = [];
 
-	res.status(200).json({ message: data });
+		if (data?.nodata) return results;
+
+		for (const item of data.processingActivities) {
+			try {
+				const reward = await fetch("https://www.bitget.com/v1/act/candyBombNew/myReward", {
+					headers: {
+						accept: "application/json, text/plain, */*",
+						"content-type": "application/json;charset=UTF-8",
+					},
+					body: `{"activityId":${item.id}}`,
+					method: "POST",
+				}).then((res) => res?.text());
+
+				console.log(reward);
+
+				let rewData = undefined;
+
+				try {
+					rewData = JSON.parse(reward);
+				} catch (error) {
+					rewData = undefined;
+				}
+
+				results.push({ ...item, reward: rewData && rewData?.data });
+			} catch (error) {
+				console.error("Error:", error);
+			}
+
+			await new Promise((resolve) => setTimeout(resolve, 800));
+		}
+
+		return results;
+	}
+
+	const processingActivities = await processArrayAsync();
+
+	res.status(200).json({ processingActivities });
 }
