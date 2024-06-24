@@ -19,9 +19,11 @@ export function middleware(request: Request) {
 		"Referrer-Policy": "unsafe-url",
 	});
 
-	const ref = request?.headers?.get('Referer')
+	const ref = request?.headers?.get("Referer");
 
-	if (ref) requestHeaders.set('Referer', ref)
+	if (ref) requestHeaders.set("Referer", ref);
+
+	console.log({ requestHeaders });
 
 	return NextResponse.next({
 		request: {
