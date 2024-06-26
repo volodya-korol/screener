@@ -23,7 +23,7 @@ export function middleware(request: Request) {
 
 	if (ref) requestHeaders.set("Referer", ref);
 
-	console.log({ requestHeaders });
+	// console.log({ requestHeaders });
 
 	return NextResponse.next({
 		request: {
