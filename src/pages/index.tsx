@@ -18,7 +18,7 @@ export const getServerSideProps = async () => {
 				"content-type": "application/json;charset=UTF-8",
 				"accept-language": "*",
 				"sec-fetch-mode": "cors",
-				// "user-agent": "undici",
+				"user-agent": "undici",
 				"accept-encoding": "gzip, deflate",
 				"content-length": "17",
 			},
@@ -28,9 +28,10 @@ export const getServerSideProps = async () => {
 		// console.log(data);
 		// console.log("====================================");
 	} catch (error) {
-		console.log("====================================");
 		// @ts-ignore
-		console.log({  config: error?.config, request: error?.request?._header });
+		console.log("====================================", error?.response?.status);
+		// @ts-ignore
+		console.log({  config: error?.config, request: error?.request });
 		console.log("================erre====================");
 	}
 
