@@ -29,6 +29,7 @@ export const getServerSideProps = async () => {
 		// console.log("====================================");
 	} catch (error) {
 		console.log("====================================");
+		// @ts-ignore
 		console.log({  config: error?.config, request: error?.request?._header });
 		console.log("================erre====================");
 	}
