@@ -2,15 +2,30 @@
 	"headers": [
 		{
 			"source": "https://www.bitget.com/*",
-			"headers": []
+			"headers": [
+				{
+					"key": "user-agent",
+					"value": "undefined"
+				}
+			]
 		},
 		{
 			"source": "https://screener-backend-production-b1eb.up.railway.app/*",
-			"headers": []
+			"headers": [
+				{
+					"key": "user-agent",
+					"value": "undefined"
+				}
+			]
 		},
 		{
 			"source": "**/*",
-			"headers": []
+			"headers": [
+				{
+					"key": "user-agent",
+					"value": "undefined"
+				}
+			]
 		}
 	]
 }
