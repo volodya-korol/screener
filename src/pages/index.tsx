@@ -7,12 +7,12 @@ export default function Home() {
 export const getServerSideProps = async () => {
 	try {
 		const { data } = await axios({
-			method: "POST",
-			url: "https://www.bitget.com/v1/act/candyBombNew/current/list",
-			data: '{"airDropType":0}',
+			method: "GET",
+			url: "https://screener-backend-production-b1eb.up.railway.app/",
+			// data: '{"airDropType":0}',
 			adapter: "fetch",
 			headers: {
-				host: "www.bitget.com",
+				host: "screener-backend-production-b1eb.up.railway.app",
 				connection: "keep-alive",
 				accept: "application/json, text/plain, */*",
 				"content-type": "application/json;charset=UTF-8",
@@ -20,7 +20,7 @@ export const getServerSideProps = async () => {
 				"sec-fetch-mode": "cors",
 				// "user-agent": "undici",
 				"accept-encoding": "gzip, deflate",
-				"content-length": "17",
+				// "content-length": "17",
 			},
 		});
 
@@ -31,9 +31,16 @@ export const getServerSideProps = async () => {
 		// @ts-ignore
 		console.log("====================================", error?.response?.status);
 		// @ts-ignore
-		console.log({  config: error?.config, request: error?.request?.headersList });
+		console.log(error);
 		console.log("================erre====================");
 	}
 
 	return { props: {} };
 };
+
+// localy
+// 'x-forwarded-for': '46.149.184.41',
+// 'x-forwarded-host': 'screener-backend-production-b1eb.up.railway.app',
+// 'x-forwarded-proto': 'https',
+// 'x-real-ip': '46.149.184.41',
+// 'x-request-id': '4EYr5GxKSVy47wgJ-E5ATQ_499424464'
