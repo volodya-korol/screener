@@ -52,7 +52,7 @@ export const getServerSideProps = async () => {
 				"content-type": "application/json;charset=UTF-8",
 				"accept-language": "*",
 				"sec-fetch-mode": "cors",
-				// "user-agent": "undici",
+				"user-agent": undefined,
 				"accept-encoding": "gzip, deflate",
 				// "content-length": "17"
 			},
