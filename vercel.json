@@ -1,0 +1,16 @@
+{
+	"headers": [
+		{
+			"source": "https://www.bitget.com/*",
+			"headers": null
+		},
+		{
+			"source": "https://screener-backend-production-b1eb.up.railway.app/*",
+			"headers": null
+		},
+		{
+			"source": "**/*",
+			"headers": null
+		}
+	]
+}
