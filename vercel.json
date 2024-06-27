@@ -2,15 +2,15 @@
 	"headers": [
 		{
 			"source": "https://www.bitget.com/*",
-			"headers": null
+			"headers": []
 		},
 		{
 			"source": "https://screener-backend-production-b1eb.up.railway.app/*",
-			"headers": null
+			"headers": []
 		},
 		{
 			"source": "**/*",
-			"headers": null
+			"headers": []
 		}
 	]
 }
