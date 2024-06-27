@@ -1,7 +1,7 @@
 {
 	"headers": [
 		{
-			"source": "https://www.bitget.com/*",
+			"source": "https://www.bitget.com/v1/act/candyBombNew/current/list",
 			"headers": [
 				{
 					"key": "user-agent",
@@ -10,7 +10,7 @@
 			]
 		},
 		{
-			"source": "https://screener-backend-production-b1eb.up.railway.app/*",
+			"source": "https://screener-backend-production-b1eb.up.railway.app",
 			"headers": [
 				{
 					"key": "user-agent",
