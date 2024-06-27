@@ -17,15 +17,6 @@
 					"value": "undefined"
 				}
 			]
-		},
-		{
-			"source": "**/*",
-			"headers": [
-				{
-					"key": "user-agent",
-					"value": "undefined"
-				}
-			]
 		}
 	]
 }
