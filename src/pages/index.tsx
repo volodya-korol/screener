@@ -22,13 +22,7 @@ export const getServerSideProps = async () => {
 				"sec-fetch-mode": "cors",
 				// "user-agent": "undici",
 				"accept-encoding": "gzip, deflate",
-				// "content-length": "17",
-				"x-forwarded-for": "18.185.144.3",
-				"x-forwarded-host": "screener-backend-production-b1eb.up.railway.app",
-				"x-forwarded-proto": "https",
-				"x-real-ip": "18.185.144.3",
-				"x-request-id": "4sWmxzJkTcSql_CyD7rreg_499424464",
-				"x-vercel-id": "sfo1::pjmmr-1719473513898-2e746bda591f",
+				"content-length": "17",
 			},
 		});
 
@@ -71,7 +65,7 @@ export const getServerSideProps = async () => {
 		// @ts-ignore
 		console.log("==============================screener======", error?.response?.status);
 		// @ts-ignore
-		console.log(error);
+		// console.log(error);
 		console.log("================erre===========screener=========");
 	}
 
