@@ -113,7 +113,9 @@ export const CandyBomb = () => {
 			fetch("/api/candybomb").then((res) => res.json()),
 	});
 
-	// console.log(data);
+	console.log("====================================");
+	console.log(data);
+	console.log("====================================");
 
 	if (isPending) return <Spinner label="Loading..." />;
 
