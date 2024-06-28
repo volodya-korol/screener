@@ -5,7 +5,7 @@
 			"headers": [
 				{
 					"key": "user-agent",
-					"value": null
+					"value": ""
 				}
 			]
 		},

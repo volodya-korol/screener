@@ -8,13 +8,11 @@ export const getServerSideProps = async () => {
 	try {
 		const { data } = await axios({
 			method: "POST",
-			// url: "https://screener-backend-production-b1eb.up.railway.app/",
 			url: "https://www.bitget.com/v1/act/candyBombNew/current/list",
 			data: '{"airDropType":0}',
 			adapter: "fetch",
 			headers: {
 				host: "www.bitget.com",
-				// host: "screener-backend-production-b1eb.up.railway.app",
 				connection: "keep-alive",
 				accept: "application/json, text/plain, */*",
 				"content-type": "application/json;charset=UTF-8",
@@ -52,7 +50,7 @@ export const getServerSideProps = async () => {
 				"content-type": "application/json;charset=UTF-8",
 				"accept-language": "*",
 				"sec-fetch-mode": "cors",
-				"user-agent": undefined,
+				"user-agent": '',
 				"accept-encoding": "gzip, deflate",
 				// "content-length": "17"
 			},
