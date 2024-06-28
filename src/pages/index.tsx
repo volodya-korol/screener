@@ -1,33 +1,31 @@
-import { CandyBomb } from "@/components/CandyBomb";
+import axios from "axios";
 
-export default function Home() {
-	return (
-		<div className="p-4">
+export default function Home(props: any) {
+	console.log("==================data==================");
+	console.log(props);
+	console.log("====================================");
 
-			<CandyBomb />
-		</div>
-	);
+	return <div className="p-4">{/* <CandyBomb /> */}</div>;
 }
 
 export const getServerSideProps = async () => {
-	// try {
-	// 	const { data } = await axios({
-	// 		method: "POST",
-	// 		url: "https://www.bitget.com/v1/act/candyBombNew/current/list",
-	// 		data: '{"airDropType":0}',
-	// 		adapter: "fetch",
-	// 		headers: {
-	// 			host: "www.bitget.com",
-	// 			connection: "keep-alive",
-	// 			accept: "application/json, text/plain, */*",
-	// 			"content-type": "application/json;charset=UTF-8",
-	// 			"accept-language": "*",
-	// 			"sec-fetch-mode": "cors",
-	// 			// "user-agent": '1232131',
-	// 			"accept-encoding": "gzip, deflate",
-	// 			"content-length": "17",
-	// 		},
-	// 	});
+	const { data } = await axios.post(
+		"https://www.bitget.com/v1/act/candyBombNew/current/list/",
+		{ airDropType: 0 },
+		{
+			adapter: ["fetch"],
+			headers: {
+				host: "www.bitget.com",
+				connection: "keep-alive",
+				accept: "application/json, text/plain, */*",
+				"content-type": "application/json;charset=UTF-8",
+				"accept-language": "*",
+				"sec-fetch-mode": "cors",
+				"accept-encoding": "gzip, deflate",
+			},
+		}
+	);
+	і;
 
 	// 	console.log("==================================== OK");
 	// 	// console.log(data);
@@ -73,7 +71,7 @@ export const getServerSideProps = async () => {
 	// 	console.log("================erre===========screener=========");
 	// }
 
-	return { props: {} };
+	return { props: { data } };
 };
 
 // localy
