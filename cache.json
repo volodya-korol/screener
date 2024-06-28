@@ -1,0 +1,583 @@
+{
+  "processingActivities": [
+    {
+      "activityStatus": 1,
+      "airDropTypeList": [
+        2,
+        1
+      ],
+      "coinContent": [],
+      "coinIcon": "https://img.bitgetimg.com/multiLang/web/0b8d73ac62a209ea0246572b60161a32.png",
+      "contentDTOList": [],
+      "countDownStatus": 2,
+      "countDownTime": "406142193",
+      "desc": "Portuma combines in-game advertising with blockchain technology. We provide solution which earn playing game and watching ads in any games in Portuma's ecosystem to our gamers. Portuma offer to this technology as holistic for all games which any platforms without being tied to a publisher or studio.",
+      "endTime": "1720004400172",
+      "iconDtoList": [],
+      "id": "8983",
+      "ieoTotal": 31820000,
+      "ieoTotalUsdt": 22242.18,
+      "infiniteMode": 1,
+      "inviteStatus": 0,
+      "isTop": 0,
+      "localInviteStatus": false,
+      "name": "PORTUMA",
+      "newContractUserSignUp": false,
+      "newUserSignUp": false,
+      "newUserStatus": false,
+      "oldUserSignUp": false,
+      "oldUserStatus": false,
+      "remind": false,
+      "rewardCarousels": [
+        {
+          "award": 240000,
+          "awardUSDT": 167.76,
+          "coinName": "PORTUMA",
+          "targetType": 10,
+          "threshold": "1430616",
+          "unit": "PORTUMA"
+        },
+        {
+          "award": 26805.07,
+          "awardUSDT": 18.73674393,
+          "coinName": "PORTUMA",
+          "targetType": 4,
+          "threshold": "1000",
+          "unit": "U"
+        }
+      ],
+      "startTime": "1719399600172",
+      "totalPeople": 4525,
+      "reward": [
+        {
+          "amount": "15910000",
+          "awardLimit": "240000",
+          "businessLineList": [],
+          "coinIdList": [
+            1347
+          ],
+          "coinNameList": [
+            "PORTUMA"
+          ],
+          "contractSymbolIdList": [],
+          "everySign": "null",
+          "infiniteMode": 1,
+          "newStatus": false,
+          "rewardCarouselVo": {
+            "award": 26805.07,
+            "awardUSDT": 18.73674393,
+            "coinName": "PORTUMA",
+            "targetType": 4,
+            "threshold": "1000",
+            "unit": "U"
+          },
+          "rewardSign": "0",
+          "sendSign": "1260",
+          "statisticalType": 1,
+          "symbolCodeDisplayName": [],
+          "symbolId": [
+            "PORTUMA"
+          ],
+          "targetRelations": [
+            {
+              "maxVolume": 1000,
+              "point": 1,
+              "volume": 100
+            },
+            {
+              "maxVolume": 5000,
+              "point": 2,
+              "volume": 1000
+            },
+            {
+              "maxVolume": 10000,
+              "point": 4,
+              "volume": 5000
+            },
+            {
+              "maxVolume": 30000,
+              "point": 6,
+              "volume": 10000
+            },
+            {
+              "point": 8,
+              "volume": 30000
+            }
+          ],
+          "targetType": 4
+        },
+        {
+          "amount": "15910000",
+          "awardLimit": "240000",
+          "businessLineList": [],
+          "coinIdList": [
+            1347
+          ],
+          "coinNameList": [
+            "PORTUMA"
+          ],
+          "contractSymbolIdList": [],
+          "everySign": "null",
+          "infiniteMode": 1,
+          "newStatus": false,
+          "rewardCarouselVo": {
+            "award": 240000,
+            "awardUSDT": 167.76,
+            "coinName": "PORTUMA",
+            "targetType": 10,
+            "threshold": "1430616",
+            "unit": "PORTUMA"
+          },
+          "rewardSign": "0",
+          "sendSign": "148",
+          "statisticalType": 1,
+          "symbolCodeDisplayName": [],
+          "symbolId": [
+            "PORTUMA"
+          ],
+          "targetRelations": [
+            {
+              "maxVolume": 360000,
+              "point": 1,
+              "volume": 120000
+            },
+            {
+              "maxVolume": 600000,
+              "point": 2,
+              "volume": 360000
+            },
+            {
+              "maxVolume": 1200000,
+              "point": 3,
+              "volume": 600000
+            },
+            {
+              "maxVolume": 6000000,
+              "point": 5,
+              "volume": 1200000
+            },
+            {
+              "maxVolume": 12000000,
+              "point": 10,
+              "volume": 6000000
+            },
+            {
+              "maxVolume": 36000000,
+              "point": 20,
+              "volume": 12000000
+            },
+            {
+              "point": 30,
+              "volume": 36000000
+            }
+          ],
+          "targetType": 10
+        }
+      ]
+    },
+    {
+      "activityStatus": 1,
+      "airDropTypeList": [
+        2
+      ],
+      "coinContent": [],
+      "coinIcon": "https://img.bitgetimg.com/multiLang/web/2170ddae00a957a4bb7a3c031d54a274.jpeg",
+      "contentDTOList": [],
+      "countDownStatus": 2,
+      "countDownTime": "492542746",
+      "desc": "Blast is a L2 that incorporates native yield. Your balance on Blast compounds automatically.",
+      "endTime": "1720090800723",
+      "iconDtoList": [],
+      "id": "8989",
+      "ieoTotal": 763000,
+      "ieoTotalUsdt": 16259.53,
+      "infiniteMode": 1,
+      "inviteStatus": 0,
+      "isTop": 0,
+      "localInviteStatus": false,
+      "name": "BLAST",
+      "newContractUserSignUp": false,
+      "newUserSignUp": true,
+      "newUserStatus": false,
+      "oldUserSignUp": false,
+      "oldUserStatus": false,
+      "remind": false,
+      "rewardCarousels": [
+        {
+          "award": 7630,
+          "awardUSDT": 162.5953,
+          "coinName": "BLAST",
+          "targetType": 4,
+          "threshold": "1000",
+          "unit": "U"
+        }
+      ],
+      "startTime": "1719486000723",
+      "totalPeople": 260,
+      "reward": [
+        {
+          "amount": "763000",
+          "awardLimit": "7630",
+          "businessLineList": [],
+          "coinIdList": [
+            1394
+          ],
+          "coinNameList": [
+            "BLAST"
+          ],
+          "contractSymbolIdList": [],
+          "everySign": "null",
+          "infiniteMode": 1,
+          "newStatus": true,
+          "rewardCarouselVo": {
+            "award": 7630,
+            "awardUSDT": 162.5953,
+            "coinName": "BLAST",
+            "targetType": 4,
+            "threshold": "1000",
+            "unit": "U"
+          },
+          "rewardSign": "0",
+          "sendSign": "110",
+          "statisticalType": 2,
+          "symbolCodeDisplayName": [],
+          "symbolId": [
+            "BLAST"
+          ],
+          "targetRelations": [
+            {
+              "maxVolume": 1000,
+              "point": 1,
+              "volume": 100
+            },
+            {
+              "maxVolume": 5000,
+              "point": 2,
+              "volume": 1000
+            },
+            {
+              "maxVolume": 10000,
+              "point": 4,
+              "volume": 5000
+            },
+            {
+              "maxVolume": 30000,
+              "point": 6,
+              "volume": 10000
+            },
+            {
+              "point": 8,
+              "volume": 30000
+            }
+          ],
+          "targetType": 4
+        }
+      ]
+    },
+    {
+      "activityStatus": 1,
+      "airDropTypeList": [
+        2
+      ],
+      "coinContent": [],
+      "coinIcon": "https://img.bitgetimg.com/multiLang/web/a3f23cbdee2aed34f3e0e0df7488096f.png",
+      "contentDTOList": [],
+      "countDownStatus": 2,
+      "countDownTime": "578942794",
+      "desc": "$MCG is an ERC-20 token planned to be launched on Ethereum mainnet and bridged to Immutable’s zkEVM. One of its first uses is serving as an in-game utility token in the MetalCore game, powering the in-game economy and rewarding users for actions within the game. MetalCore has adopted the $MCG token as a core part of the game economy, playing a key role in player progression and rewards.",
+      "endTime": "1720177200770",
+      "iconDtoList": [],
+      "id": "9012",
+      "ieoTotal": 3000000,
+      "ieoTotalUsdt": 40200,
+      "infiniteMode": 1,
+      "inviteStatus": 0,
+      "isTop": 0,
+      "localInviteStatus": false,
+      "name": "MCG",
+      "newContractUserSignUp": false,
+      "newUserSignUp": false,
+      "newUserStatus": false,
+      "oldUserSignUp": false,
+      "oldUserStatus": false,
+      "remind": false,
+      "rewardCarousels": [
+        {
+          "award": 10000,
+          "awardUSDT": 134,
+          "coinName": "MCG",
+          "targetType": 4,
+          "threshold": "1000",
+          "unit": "U"
+        },
+        {
+          "award": 1273.34,
+          "awardUSDT": 17.062756,
+          "coinName": "MCG",
+          "targetType": 39,
+          "threshold": "1000",
+          "unit": "U"
+        }
+      ],
+      "startTime": "1719572400770",
+      "totalPeople": 842,
+      "reward": [
+        {
+          "amount": "2000000",
+          "awardLimit": "10000",
+          "businessLineList": [],
+          "coinIdList": [
+            1355
+          ],
+          "coinNameList": [
+            "MCG"
+          ],
+          "contractSymbolIdList": [],
+          "everySign": "null",
+          "infiniteMode": 1,
+          "newStatus": false,
+          "rewardCarouselVo": {
+            "award": 10000,
+            "awardUSDT": 134,
+            "coinName": "MCG",
+            "targetType": 4,
+            "threshold": "1000",
+            "unit": "U"
+          },
+          "rewardSign": "0",
+          "sendSign": "286",
+          "statisticalType": 1,
+          "symbolCodeDisplayName": [],
+          "symbolId": [
+            "MCG"
+          ],
+          "targetRelations": [
+            {
+              "maxVolume": 1000,
+              "point": 1,
+              "volume": 100
+            },
+            {
+              "maxVolume": 5000,
+              "point": 2,
+              "volume": 1000
+            },
+            {
+              "maxVolume": 10000,
+              "point": 4,
+              "volume": 5000
+            },
+            {
+              "maxVolume": 30000,
+              "point": 6,
+              "volume": 10000
+            },
+            {
+              "point": 8,
+              "volume": 30000
+            }
+          ],
+          "targetType": 4
+        },
+        {
+          "amount": "1000000",
+          "awardLimit": "10000",
+          "businessLineList": [
+            "10",
+            "11",
+            "12"
+          ],
+          "coinIdList": [],
+          "coinNameList": [],
+          "contractSymbolIdList": [],
+          "everySign": "null",
+          "infiniteMode": 1,
+          "newStatus": true,
+          "rewardCarouselVo": {
+            "award": 1273.34,
+            "awardUSDT": 17.062756,
+            "coinName": "MCG",
+            "targetType": 39,
+            "threshold": "1000",
+            "unit": "U"
+          },
+          "rewardSign": "0",
+          "sendSign": "54",
+          "statisticalType": 2,
+          "symbolCodeDisplayName": [],
+          "symbolId": [],
+          "targetRelations": [
+            {
+              "maxVolume": 1000,
+              "point": 1,
+              "volume": 100
+            },
+            {
+              "maxVolume": 10000,
+              "point": 2,
+              "volume": 1000
+            },
+            {
+              "point": 3,
+              "volume": 10000
+            }
+          ],
+          "targetType": 39
+        }
+      ]
+    },
+    {
+      "activityStatus": 1,
+      "airDropTypeList": [
+        2
+      ],
+      "coinContent": [],
+      "coinIcon": "https://img.bitgetimg.com/multiLang/web/68c370ae7224859f682a38e8acf5c8af.jpeg",
+      "contentDTOList": [],
+      "countDownStatus": 2,
+      "countDownTime": "323342224",
+      "desc": "Biaoqing ($BIAO) is a memecoin on the Ethereum blockchain, inspired by a famous Asian meme representing facial expressions.",
+      "endTime": "1719921600204",
+      "iconDtoList": [],
+      "id": "8976",
+      "ieoTotal": 1635750,
+      "ieoTotalUsdt": 20070.65,
+      "infiniteMode": 1,
+      "inviteStatus": 0,
+      "isTop": 0,
+      "localInviteStatus": false,
+      "name": "BIAO",
+      "newContractUserSignUp": false,
+      "newUserSignUp": false,
+      "newUserStatus": false,
+      "oldUserSignUp": false,
+      "oldUserStatus": false,
+      "remind": false,
+      "rewardCarousels": [
+        {
+          "award": 1072.29,
+          "awardUSDT": 13.1569983,
+          "coinName": "BIAO",
+          "targetType": 4,
+          "threshold": "1000",
+          "unit": "U"
+        },
+        {
+          "award": 16.14,
+          "awardUSDT": 0.1980378,
+          "coinName": "BIAO",
+          "targetType": 39,
+          "threshold": "1000",
+          "unit": "U"
+        }
+      ],
+      "startTime": "1719316800204",
+      "totalPeople": 5461,
+      "reward": [
+        {
+          "amount": "1072400",
+          "awardLimit": "8700",
+          "businessLineList": [],
+          "coinIdList": [
+            1395
+          ],
+          "coinNameList": [
+            "BIAO"
+          ],
+          "contractSymbolIdList": [],
+          "everySign": "null",
+          "infiniteMode": 1,
+          "newStatus": false,
+          "rewardCarouselVo": {
+            "award": 1072.29,
+            "awardUSDT": 13.1569983,
+            "coinName": "BIAO",
+            "targetType": 4,
+            "threshold": "1000",
+            "unit": "U"
+          },
+          "rewardSign": "0",
+          "sendSign": "2540",
+          "statisticalType": 1,
+          "symbolCodeDisplayName": [],
+          "symbolId": [
+            "BIAO"
+          ],
+          "targetRelations": [
+            {
+              "maxVolume": 1000,
+              "point": 1,
+              "volume": 100
+            },
+            {
+              "maxVolume": 5000,
+              "point": 2,
+              "volume": 1000
+            },
+            {
+              "maxVolume": 10000,
+              "point": 4,
+              "volume": 5000
+            },
+            {
+              "maxVolume": 30000,
+              "point": 6,
+              "volume": 10000
+            },
+            {
+              "point": 8,
+              "volume": 30000
+            }
+          ],
+          "targetType": 4
+        },
+        {
+          "amount": "563350",
+          "awardLimit": "8700",
+          "businessLineList": [
+            "10",
+            "11",
+            "12"
+          ],
+          "coinIdList": [],
+          "coinNameList": [],
+          "contractSymbolIdList": [],
+          "everySign": "null",
+          "infiniteMode": 1,
+          "newStatus": true,
+          "rewardCarouselVo": {
+            "award": 16.14,
+            "awardUSDT": 0.1980378,
+            "coinName": "BIAO",
+            "targetType": 39,
+            "threshold": "1000",
+            "unit": "U"
+          },
+          "rewardSign": "0",
+          "sendSign": "2173",
+          "statisticalType": 2,
+          "symbolCodeDisplayName": [],
+          "symbolId": [],
+          "targetRelations": [
+            {
+              "maxVolume": 1000,
+              "point": 1,
+              "volume": 100
+            },
+            {
+              "maxVolume": 10000,
+              "point": 2,
+              "volume": 1000
+            },
+            {
+              "point": 3,
+              "volume": 10000
+            }
+          ],
+          "targetType": 39
+        }
+      ]
+    }
+  ],
+  "time": "2024-06-28T18:11:06.715Z"
+}

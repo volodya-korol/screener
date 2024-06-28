@@ -4,12 +4,6 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 
 const CACHE_FILE = path.resolve("./cache.json");
-const CACHE_TTL = 60 * 60 * 1000;
-let cache_exist = false;
-
-function readCache() {
-	return;
-}
 
 function writeCache(data: any) {
 	fs.writeFileSync(CACHE_FILE, JSON.stringify(data, null, 2));
@@ -26,28 +20,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 		return res.status(200).json(JSON.parse(cache));
 	}
 
-	const data1 = await fetch("https://www.bitget.com/v1/act/candyBombNew/current/list/", {
-		headers: {
-			host: "www.bitget.com",
-			connection: "keep-alive",
-			accept: "application/json, text/plain, */*",
-			"content-type": "application/json;charset=UTF-8",
-			"accept-language": "*",
-			"sec-fetch-mode": "cors",
-			"accept-encoding": "gzip, deflate",
-			"content-length": "17",
-		},
-		body: '{"airDropType":0}',
-		method: "POST",
-	});
-
-	let data: any = undefined;
-
-	try {
-		data = await data1?.json();
-	} catch (error) {
-		console.log("===================data json error=================");
-	}
+	const { data } = await axios.post(
+		"https://www.bitget.com/v1/act/candyBombNew/current/list/",
+		{ airDropType: 0 },
+		{
+			adapter: ["fetch"],
+			headers: {
+				host: "www.bitget.com",
+				connection: "keep-alive",
+				accept: "application/json, text/plain, */*",
+				"content-type": "application/json;charset=UTF-8",
+				"accept-language": "*",
+				"sec-fetch-mode": "cors",
+				"accept-encoding": "gzip, deflate",
+			},
+		}
+	);
 
 	async function processArrayAsync() {
 		const results: any[] = [];
