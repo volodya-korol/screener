@@ -9,23 +9,33 @@ export default function Home(props: any) {
 }
 
 export const getServerSideProps = async () => {
-	const { data } = await axios.post(
-		"https://www.bitget.com/v1/act/candyBombNew/current/list/",
-		{ airDropType: 0 },
-		{
-			adapter: ["fetch"],
-			headers: {
-				host: "www.bitget.com",
-				connection: "keep-alive",
-				accept: "application/json, text/plain, */*",
-				"content-type": "application/json;charset=UTF-8",
-				"accept-language": "*",
-				"sec-fetch-mode": "cors",
-				"accept-encoding": "gzip, deflate",
-			},
-		}
-	);
-	і;
+	// const { data } = await axios.post(
+	// 	"https://www.bitget.com/v1/act/candyBombNew/current/list/",
+	// 	{ airDropType: 0 },
+	// 	{
+	// 		adapter: ["fetch"],
+	// 		headers: {
+	// 			host: "www.bitget.com",
+	// 			connection: "keep-alive",
+	// 			accept: "application/json, text/plain, */*",
+	// 			"content-type": "application/json;charset=UTF-8",
+	// 			"accept-language": "*",
+	// 			"sec-fetch-mode": "cors",
+	// 			"accept-encoding": "gzip, deflate",
+	// 		},
+	// 	}
+	// );
+
+	const a1 = await axios.get("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList");
+	const a2 = await axios.get("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList", {
+		adapter: ["fetch"],
+	});
+	// const a3 = await axios.get("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList", {
+	// 	adapter: ["xhr"],
+	// });
+	const a4 = await axios.get("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList", {
+		adapter: ["http"],
+	});
 
 	// 	console.log("==================================== OK");
 	// 	// console.log(data);
@@ -71,7 +81,11 @@ export const getServerSideProps = async () => {
 	// 	console.log("================erre===========screener=========");
 	// }
 
-	return { props: { data } };
+	console.log("====================================");
+	console.log({ a1: a1.data, a2: a2.data, a4: a4.data } );
+	console.log("====================================");
+
+	return { props: { a1: a1.data, a2: a2.data, a4: a4.data } };
 };
 
 // localy
