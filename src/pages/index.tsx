@@ -27,15 +27,15 @@ export const getServerSideProps = async () => {
 	// );
 
 	const a1 = await axios.get("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList");
-	const a2 = await axios.get("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList", {
-		adapter: ["fetch"],
-	});
-	// const a3 = await axios.get("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList", {
-	// 	adapter: ["xhr"],
+	// const a2 = await axios.get("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList", {
+	// 	adapter: ["fetch"],
 	// });
-	const a4 = await axios.get("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList", {
-		adapter: ["http"],
-	});
+	// // const a3 = await axios.get("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList", {
+	// // 	adapter: ["xhr"],
+	// // });
+	// const a4 = await axios.get("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList", {
+	// 	adapter: ["http"],
+	// });
 
 	// 	console.log("==================================== OK");
 	// 	// console.log(data);
@@ -82,10 +82,10 @@ export const getServerSideProps = async () => {
 	// }
 
 	console.log("====================================");
-	console.log({ a1: a1.data, a2: a2.data, a4: a4.data } );
+	console.log({ a1: a1.data });
 	console.log("====================================");
 
-	return { props: { a1: a1.data, a2: a2.data, a4: a4.data } };
+	return { props: { a1: a1.data } };
 };
 
 // localy
