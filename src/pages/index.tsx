@@ -24,9 +24,7 @@ export const getServerSideProps = async () => {
 	// 	}
 	// );
 
-	fetch("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList").then(async (data) =>
-		console.log(await data.text())
-	);
+	const res = await fetch("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList");
 	// const a2 = await axios.get("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList", {
 	// 	adapter: ["fetch"],
 	// });
@@ -85,7 +83,7 @@ export const getServerSideProps = async () => {
 	// console.log({ a1: a1.data });
 	// console.log("====================================");
 
-	return { props: {} };
+	return { props: { data: await res.text() } };
 };
 
 // localy
