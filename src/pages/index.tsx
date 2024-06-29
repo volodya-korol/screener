@@ -1,90 +1,95 @@
+import { useQuery } from "@tanstack/react-query";
+
 export default function Home(props: any) {
-	console.log("==================data==================");
-	console.log(props);
-	console.log("====================================");
+	const { data, isPending } = useQuery({
+		queryKey: ["candybomb"],
+		queryFn: () => fetch("/api/token").then((res) => res.json()),
+	});
+
+	console.log(data);
 
 	return <div className="p-4">{/* <CandyBomb /> */}</div>;
 }
 
-export const getServerSideProps = async () => {
-	// const { data } = await axios.post(
-	// 	"https://www.bitget.com/v1/act/candyBombNew/current/list/",
-	// 	{ airDropType: 0 },
-	// 	{
-	// 		adapter: ["fetch"],
-	// 		headers: {
-	// 			host: "www.bitget.com",
-	// 			connection: "keep-alive",
-	// 			accept: "application/json, text/plain, */*",
-	// 			"content-type": "application/json;charset=UTF-8",
-	// 			"accept-language": "*",
-	// 			"sec-fetch-mode": "cors",
-	// 			"accept-encoding": "gzip, deflate",
-	// 		},
-	// 	}
-	// );
+// export const getServerSideProps = async () => {
+// 	// const { data } = await axios.post(
+// 	// 	"https://www.bitget.com/v1/act/candyBombNew/current/list/",
+// 	// 	{ airDropType: 0 },
+// 	// 	{
+// 	// 		adapter: ["fetch"],
+// 	// 		headers: {
+// 	// 			host: "www.bitget.com",
+// 	// 			connection: "keep-alive",
+// 	// 			accept: "application/json, text/plain, */*",
+// 	// 			"content-type": "application/json;charset=UTF-8",
+// 	// 			"accept-language": "*",
+// 	// 			"sec-fetch-mode": "cors",
+// 	// 			"accept-encoding": "gzip, deflate",
+// 	// 		},
+// 	// 	}
+// 	// );
 
-	const res = await fetch("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList");
-	// const a2 = await axios.get("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList", {
-	// 	adapter: ["fetch"],
-	// });
-	// // const a3 = await axios.get("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList", {
-	// // 	adapter: ["xhr"],
-	// // });
-	// const a4 = await axios.get("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList", {
-	// 	adapter: ["http"],
-	// });
+// 	const res = await fetch("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList");
+// 	// const a2 = await axios.get("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList", {
+// 	// 	adapter: ["fetch"],
+// 	// });
+// 	// // const a3 = await axios.get("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList", {
+// 	// // 	adapter: ["xhr"],
+// 	// // });
+// 	// const a4 = await axios.get("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList", {
+// 	// 	adapter: ["http"],
+// 	// });
 
-	// 	console.log("==================================== OK");
-	// 	// console.log(data);
-	// 	// console.log("====================================");
-	// } catch (error) {
-	// 	// @ts-ignore
-	// 	console.log("====================================", error?.response?.status);
-	// 	// @ts-ignore
-	// 	console.log(error);
-	// 	console.log("================erre====================");
-	// }
+// 	// 	console.log("==================================== OK");
+// 	// 	// console.log(data);
+// 	// 	// console.log("====================================");
+// 	// } catch (error) {
+// 	// 	// @ts-ignore
+// 	// 	console.log("====================================", error?.response?.status);
+// 	// 	// @ts-ignore
+// 	// 	console.log(error);
+// 	// 	console.log("================erre====================");
+// 	// }
 
-	// try {
-	// 	const { data } = await axios({
-	// 		method: "GET",
-	// 		url: "https://screener-backend-production-b1eb.up.railway.app/",
-	// 		// url: "https://www.bitget.com/v1/act/candyBombNew/current/list",
-	// 		// data: '{"airDropType":0}',
-	// 		adapter: "fetch",
-	// 		headers: {
-	// 			// host: "www.bitget.com",
-	// 			host: "screener-backend-production-b1eb.up.railway.app",
-	// 			connection: "keep-alive",
-	// 			accept: "application/json, text/plain, */*",
-	// 			"content-type": "application/json;charset=UTF-8",
-	// 			"accept-language": "*",
-	// 			"sec-fetch-mode": "cors",
-	// 			"user-agent": "",
-	// 			hello: "hi",
-	// 			"accept-encoding": "gzip, deflate",
-	// 			// "content-length": "17"
-	// 		},
-	// 	});
+// 	// try {
+// 	// 	const { data } = await axios({
+// 	// 		method: "GET",
+// 	// 		url: "https://screener-backend-production-b1eb.up.railway.app/",
+// 	// 		// url: "https://www.bitget.com/v1/act/candyBombNew/current/list",
+// 	// 		// data: '{"airDropType":0}',
+// 	// 		adapter: "fetch",
+// 	// 		headers: {
+// 	// 			// host: "www.bitget.com",
+// 	// 			host: "screener-backend-production-b1eb.up.railway.app",
+// 	// 			connection: "keep-alive",
+// 	// 			accept: "application/json, text/plain, */*",
+// 	// 			"content-type": "application/json;charset=UTF-8",
+// 	// 			"accept-language": "*",
+// 	// 			"sec-fetch-mode": "cors",
+// 	// 			"user-agent": "",
+// 	// 			hello: "hi",
+// 	// 			"accept-encoding": "gzip, deflate",
+// 	// 			// "content-length": "17"
+// 	// 		},
+// 	// 	});
 
-	// 	console.log("=================================screener=== OK");
-	// 	// console.log(data);
-	// 	// console.log("====================================");
-	// } catch (error) {
-	// 	// @ts-ignore
-	// 	console.log("==============================screener======", error?.response?.status);
-	// 	// @ts-ignore
-	// 	// console.log(error);
-	// 	console.log("================erre===========screener=========");
-	// }
+// 	// 	console.log("=================================screener=== OK");
+// 	// 	// console.log(data);
+// 	// 	// console.log("====================================");
+// 	// } catch (error) {
+// 	// 	// @ts-ignore
+// 	// 	console.log("==============================screener======", error?.response?.status);
+// 	// 	// @ts-ignore
+// 	// 	// console.log(error);
+// 	// 	console.log("================erre===========screener=========");
+// 	// }
 
-	// console.log("====================================");
-	// console.log({ a1: a1.data });
-	// console.log("====================================");
+// 	// console.log("====================================");
+// 	// console.log({ a1: a1.data });
+// 	// console.log("====================================");
 
-	return { props: { data: await res.text() } };
-};
+// 	return { props: { data: await res.text() } };
+// };
 
 // localy
 // 'x-forwarded-for': '46.149.184.41',
