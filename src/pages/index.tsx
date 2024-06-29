@@ -85,7 +85,7 @@ export const getServerSideProps = async () => {
 	console.log({ a1: a1.data });
 	console.log("====================================");
 
-	return { props: { a1: a1.data } };
+	return { props: {} };
 };
 
 // localy
