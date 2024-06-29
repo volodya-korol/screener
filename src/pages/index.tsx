@@ -1,5 +1,3 @@
-import axios from "axios";
-
 export default function Home(props: any) {
 	console.log("==================data==================");
 	console.log(props);
@@ -26,7 +24,9 @@ export const getServerSideProps = async () => {
 	// 	}
 	// );
 
-	// const a1 = await axios.get("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList");
+	fetch("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList").then(async (data) =>
+		console.log(await data.text())
+	);
 	// const a2 = await axios.get("https://api2.bybit.com/spot/api/deposit-activity/v2/project/ongoing/projectList", {
 	// 	adapter: ["fetch"],
 	// });
