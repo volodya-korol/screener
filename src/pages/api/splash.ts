@@ -5,6 +5,10 @@ import path from "path";
 
 const CACHE_FILE = path.resolve("./splash.json");
 
+export const config = {
+	maxDuration: 50000000,
+  };
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 	if (checkCacheData(CACHE_FILE)) return res.status(200).json(JSON.parse(getCacheData(CACHE_FILE)));
 
