@@ -1,24 +1,13 @@
+import { cacheData, checkCacheData, getCacheData } from "@/untils";
 import axios from "axios";
-import fs from "fs";
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 
-const CACHE_FILE = path.resolve("./cache.json");
-
-function writeCache(data: any) {
-	fs.writeFileSync(CACHE_FILE, JSON.stringify(data, null, 2));
-}
+const CACHE_FILE = path.resolve("./candybomb.json");
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-	console.log("rest", fs.existsSync(CACHE_FILE));
 
-	if (fs.existsSync(CACHE_FILE)) {
-		const cache = fs.readFileSync(CACHE_FILE).toString();
-		console.log("===============cache=====================");
-		console.log(cache);
-		console.log("====================================");
-		return res.status(200).json(JSON.parse(cache));
-	}
+	if (checkCacheData(CACHE_FILE)) return res.status(200).json(JSON.parse(getCacheData(CACHE_FILE)));
 
 	const { data } = await axios.post(
 		"https://www.bitget.com/v1/act/candyBombNew/current/list/",
@@ -43,7 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 		if (!data) return results;
 
 		for (const item of data?.data?.processingActivities) {
-			await new Promise((resolve) => setTimeout(resolve, 2000));
+			await new Promise((resolve) => setTimeout(resolve, 5000));
 
 			try {
 				const rew = await axios.post(
@@ -84,17 +73,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 	const processingActivities = await processArrayAsync();
 
-	console.log("======================processingActivities==============");
-	console.log(processingActivities);
-	console.log("====================================");
-
+	const respon = { processingActivities, time: new Date().toISOString() };
 	const withData = processingActivities?.every((df) => !!df?.reward) && !!processingActivities.length;
 
-	console.log(withData);
 
-	const respon = { processingActivities, time: new Date().toISOString() };
-
-	if (withData) writeCache(respon);
+	if (withData) cacheData(CACHE_FILE, respon);
 
 	res.status(200).json(respon);
 }

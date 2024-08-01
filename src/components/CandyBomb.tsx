@@ -1,4 +1,4 @@
-import { Box, styled } from "@mui/material";
+import { Box, Button, styled } from "@mui/material";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import MuiTableCell from "@mui/material/TableCell";
@@ -39,7 +39,7 @@ const RenderInfoColumns = ({
 	const rewardPerTicket = poolInUsdt / totalTickets;
 
 	const spotTickets = reward?.targetRelations.map((rel) => {
-		const commission = rel?.volume / 1000;
+		const commission = reward?.targetType === 39 ? (rel?.volume * 0.7) / 1000 : rel?.volume / 1000;
 		const profit = Number((rewardPerTicket * rel?.point - commission).toFixed(2));
 
 		return { ...rel, commission, profit };
@@ -107,25 +107,28 @@ const formatComma = (number: number | string) => String(number).replace(/\B(?=(\
 export const CandyBomb = () => {
 	const [predictUsers, setPredictUsers] = useState(false);
 
-	const { data, isPending } = useQuery<{ time: string; processingActivities: ProcessingActivities[] }>({
+	const { data, isPending, isRefetching, refetch } = useQuery<{
+		time: string;
+		processingActivities: ProcessingActivities[];
+	}>({
 		queryKey: ["candybomb"],
 		queryFn: (): Promise<{ time: string; processingActivities: ProcessingActivities[] }> =>
 			fetch("/api/candybomb").then((res) => res.json()),
 	});
 
-	console.log("====================================");
-	console.log(data);
-	console.log("====================================");
-
-	if (isPending) return <Spinner label="Loading..." />;
+	if (isPending || isRefetching) return <Spinner label="Loading..." />;
 
 	return (
 		<Card>
 			<CardBody>
-				<div style={{ display: "flex", gap: "12px" }}>
+				<div style={{ display: "flex", gap: "12px", alignItems: 'center' }}>
+					<p style={{ fontWeight: 600, fontSize: 16 }}>Candy bomb</p>
+
 					<Checkbox isSelected={predictUsers} onValueChange={setPredictUsers}>
 						Predict user count
 					</Checkbox>
+
+					<Button onClick={() => refetch()}>refetch</Button>
 				</div>
 				<Table sx={{ tableLayout: "fixed" }}>
 					<TableHead>

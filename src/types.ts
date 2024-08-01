@@ -123,3 +123,85 @@ const s = {
 	],
 	targetType: 4,
 };
+
+
+type SocialMedia = {
+    mediaType: number;
+    mediaUrl: string;
+};
+
+type NewUserCondition1 = {
+    token: string;
+    amount: string;
+};
+
+type TradeList = {
+    token: string;
+    amount: string;
+};
+
+type NewUserCondition2 = {
+    depositAmount: string;
+    tradeList: TradeList[];
+};
+
+export interface Splash {
+    code: string;
+    type: number;
+    totalPrizePool: string;
+    token: string;
+    tokenFullName: string;
+    icon: string;
+    depositStart: number;
+    participants: number;
+    depositEnd: number;
+    applyStart: number;
+    applyEnd: number;
+    openTime: number;
+    publishTime: number;
+    newUserPrizeTotal: string;
+    newUserPrize: string;
+    newUserPrizeToken: string;
+    oldUserPrizeTotal: string;
+    oldUserPrize: string;
+    oldUserPrizeToken: string;
+    firstDepositNumber: string;
+    firstDepositToken: string;
+    secondDepositNumber: string;
+    secondTradeToken: string;
+    supportChain: any;
+    remark: string;
+    limitCountry: string;
+    kycLevel: number;
+    limitCountryDesc: any;
+    userKyc: any;
+    isKyb: any;
+    isCountryLimit: boolean;
+    newLastUserWinTime: number;
+    oldLastUserWinTime: number;
+    socialMediaList: SocialMedia[];
+    advertisingList: any;
+    systemTime: number;
+    totalTradeValue: string;
+    taskType: number;
+    tradeUserPrizeTotal: string;
+    tradePrizeToken: string;
+    tradeStart: number;
+    tradeEnd: number;
+    tradeApplyStart: number;
+    tradePublishTime: number;
+    tradeLimitAmount: string;
+    tradeSymbolList: string;
+    tradeToken: string;
+    tradeAirdropTop: string;
+    prizePool: any;
+    awardToken: any;
+    coinAssetType: number;
+    prizeType: number;
+    newUserCondition1: NewUserCondition1[];
+    newUserCondition2: NewUserCondition2;
+    oldUserCondition1: any;
+    oldUserCondition2: any;
+}
+
+export type SplashRes = Splash[]

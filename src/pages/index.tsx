@@ -1,14 +1,14 @@
-import { useQuery } from "@tanstack/react-query";
+import { CandyBomb } from "@/components/CandyBomb";
+import { TokenSplash } from "@/components/TokenSplash";
 
 export default function Home(props: any) {
-	const { data, isPending } = useQuery({
-		queryKey: ["candybomb"],
-		queryFn: () => fetch("/api/token").then((res) => res.json()),
-	});
 
-	console.log(data);
-
-	return <div className="p-4">{/* <CandyBomb /> */}</div>;
+	return (
+		<div className="p-4" style={{display: 'flex', flexDirection: 'column', gap: 48}}>
+			<CandyBomb />
+			<TokenSplash />
+		</div>
+	);
 }
 
 // export const getServerSideProps = async () => {
