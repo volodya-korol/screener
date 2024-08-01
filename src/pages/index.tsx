@@ -1,11 +1,10 @@
-import { CandyBomb } from "@/components/CandyBomb";
 import { TokenSplash } from "@/components/TokenSplash";
 
 export default function Home(props: any) {
 
 	return (
 		<div className="p-4" style={{display: 'flex', flexDirection: 'column', gap: 48}}>
-			<CandyBomb />
+			{/* <CandyBomb /> */}
 			<TokenSplash />
 		</div>
 	);

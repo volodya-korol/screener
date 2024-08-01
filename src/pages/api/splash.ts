@@ -20,8 +20,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 		if (!data?.result) return results;
 
 		for (const item of data?.result) {
-			await new Promise((resolve) => setTimeout(resolve, 100));
-
 			const { data } = await axios.get(
 				`https://api2.bybit.com/spot/api/deposit-activity/v2/project/detail?projectCode=${item?.code}`
 			);
