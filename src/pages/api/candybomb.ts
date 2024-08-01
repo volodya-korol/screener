@@ -6,7 +6,7 @@ import path from "path";
 const CACHE_FILE = path.resolve("./candybomb.json");
 
 export const config = {
-	maxDuration: 50000000,
+	maxDuration: 60 ,
   };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
